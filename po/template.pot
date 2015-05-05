@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: www/views/addPerson.html:4
+msgid "Add by e-mail"
+msgstr ""
+
+#: www/views/peoplemet.html:7
+msgid "Add by E-mail"
+msgstr ""
+
+#: www/views/peoplemet.html:6
+msgid "Add by QR Code"
+msgstr ""
+
+#: www/views/addPerson.html:12
+msgid "Add Now"
+msgstr ""
+
+#: www/views/firstTime.html:12
+msgid "Agree and enter WordCampp App"
+msgstr ""
+
+#: www/views/sessions.html:5
+msgid "ALL Tracks"
+msgstr ""
+
+#: www/views/singlePost.html:3
+msgid "Back to Blog"
+msgstr ""
+
+#: www/views/singleGuide.html:3
+msgid "Back to Guides"
+msgstr ""
+
+#: www/views/singleSession.html:3
+msgid "Back to Sessions"
+msgstr ""
+
+#: www/views/menu.html:42
+msgid "Blog"
+msgstr ""
+
+#: www/views/singlePost.html:1
+msgid "Blog Post"
+msgstr ""
+
+#: www/views/addGravatar.html:24
+#: www/views/addPerson.html:13
+msgid "Cancel"
+msgstr ""
+
+#: www/views/addGravatar.html:8
+msgid "Change the owner"
+msgstr ""
+
+#: www/views/start.html:1
+msgid "Code is Poetry"
+msgstr ""
+
+#: www/views/addPerson.html:8
+msgid "e-mail"
+msgstr ""
+
+#: www/views/addGravatar.html:18
+msgid "E-mail"
+msgstr ""
+
+#: www/views/guides.html:5
+#: www/views/menu.html:39
+msgid "Guides"
+msgstr ""
+
+#: www/views/peoplemet.html:4
+msgid "Here you have the contacts of every person you met and Scaned QR-Code."
+msgstr ""
+
+#: www/views/addGravatar.html:1
+msgid "Make this app mine"
+msgstr ""
+
+#: www/views/menu.html:26
+msgid "Make this App Mine"
+msgstr ""
+
+#: www/views/menu.html:36
+msgid "Manage People Met"
+msgstr ""
+
+#: www/views/addGravatar.html:6
+msgid "Only proceed if this is wrong."
+msgstr ""
+
+#: www/views/singlePost.html:14
+msgid "Originally published in"
+msgstr ""
+
+#: www/views/peoplemet.html:1
+msgid "People you met"
+msgstr ""
+
+#: www/views/addPerson.html:9
+msgid "person@email.com"
+msgstr ""
+
+#: www/views/addPerson.html:1
+msgid "Scan Person"
+msgstr ""
+
+#: www/views/menu.html:33
+msgid "Schedule/Program"
+msgstr ""
+
+#: www/views/start.html:22
+msgid "Sponsors:"
+msgstr ""
+
+#: www/views/menu.html:30
+msgid "Start"
+msgstr ""
+
+#: www/views/guides.html:1
+msgid "Survivor Guides"
+msgstr ""
+
+#: www/views/firstTime.html:11
+msgid "Terms and Conditions"
+msgstr ""
+
+#: www/views/addGravatar.html:22
+msgid "That is Me"
+msgstr ""
+
+#: www/views/firstTime.html:9
+#: www/views/start.html:11
+msgid "This App is intended to be used as a Guide, Souvenir and way to make contacts and new friends."
+msgstr ""
+
+#: www/views/addGravatar.html:5
+msgid "This app is registered to"
+msgstr ""
+
+#: www/views/singleSession.html:16
+msgid "Track"
+msgstr ""
+
+#: www/views/sessions.html:10
+#: www/views/sessions.html:6
+msgid "Tracks"
+msgstr ""
+
+#: www/views/firstTime.html:10
+msgid "We ask you o please read our"
+msgstr ""
+
+#: www/views/start.html:12
+msgid "What do you want to do next?"
+msgstr ""
+
+#: www/views/start.html:10
+msgid "You are most wellcome"
+msgstr ""
+
+#: www/views/firstTime.html:8
+msgid "You are most wellcome."
+msgstr ""
+
+#: www/views/addGravatar.html:14
+msgid "You can make this app yours by entering your gravatar e-mail."
+msgstr ""
+
+#: www/views/firstTime.html:11
+msgid "You must agree with them to use this App."
+msgstr ""

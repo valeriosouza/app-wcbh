@@ -1,0 +1,18 @@
+<ion-view title="{{'Blog Post' | translate}}">
+		<ion-nav-buttons side="secondary">
+	    <a class="button" ui-sref="app.blog" translate>
+	      Back to Blog
+	    </a>
+  	</ion-nav-buttons>
+    <ion-content padding="true" class="has-header">
+        	<h3>{{post.title}}</h3>
+        	<p><small>{{post.date  | date:'dd-MM-yyyy' : 'UTC' }}</small></p>
+        <div class="card  padding">
+					<div ng-bind-html="post.content" class="item item-body">
+          </div>
+					<div class="item item-divider">
+						<small translate>Originally published in</small> <small>{{post.link}}</small>
+					</div>
+        </div>
+    </ion-content>
+</ion-view>

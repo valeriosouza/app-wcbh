@@ -1,0 +1,15 @@
+<ion-view title="{{ 'Wellcome to WordCamp' || translate}}">
+  <ion-content padding="true" class="has-header">
+    <div class="main-header" style="background-image:url('{{imgs.headerBackground}}');">
+    <img src="{{imgs.logo}}" class="main-logo">
+  </div>
+    <div>
+      <p>{{error}}</p>
+      <p translate>You are most wellcome.</p>
+      <p translate>This App is intended to be used as a Guide, Souvenir and way to make contacts and new friends.</p>
+      <p><translate>We ask you o please read our</translate>
+      <a href="/terms" translate>Terms and Conditions</a>. <translate>You must agree with them to use this App.</translate></p>
+      <button ng-click="acceptTerms()" class="button button-stable button-clear button-block" translate>Agree and enter WordCampp App</button>
+    </div>
+  </ion-content>
+</ion-view>

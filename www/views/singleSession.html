@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-nav-buttons side="secondary">
+    <a class="button" ui-sref="app.sessions" translate>
+      Back to Sessions
+    </a>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div class="card">
+      <div class="item title">
+        {{session.title}}
+        <span class="item-note">
+          {{session.sessionTimestamp *1000  | date:'HH:mma' : 'UTC' }}
+        </span>
+        <br>
+        <span class="item-note">
+          <translate>Track</translate>: {{session.terms.wcb_track[0].name}}
+        </span>
+      </div>            
+      <div class="item item-body" ng-hide="!session.content">
+        <p ng-bind-html="session.content"></p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

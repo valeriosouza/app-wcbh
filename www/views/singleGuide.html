@@ -1,0 +1,13 @@
+<ion-view>
+	<ion-nav-buttons side="secondary">
+	  <a class="button" ui-sref="app.guides" translate>
+	    Back to Guides
+	  </a>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+  	<div>
+    <h2 class="title" >{{guide.title}}</h2>
+    <p ng-bind-html="guide.content"></p>
+    </div>
+  </ion-content>
+</ion-view>
