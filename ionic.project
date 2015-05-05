@@ -1,0 +1,12 @@
+{
+  "name": "WordCampApp",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "stylus",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

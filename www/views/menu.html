@@ -1,0 +1,47 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-assertive">
+      <h1 class="title">WordCamp Bh</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item ng-if="checaOwner()" nav-clear menu-close class="item-avatar">
+            <img ng-src="{{avatar}}" ng-if="avatar">
+            <h2>{{appOwner.displayName}}</h2>
+            <p>{{appOwner.currentLocation}}</p>
+            <a class="badge" href="#/app/addGravatar">
+              <i class="icon ion-compose"></i>
+            </a>
+        </ion-item>
+        <ion-item nav-clear menu-close ng-if="!checaOwner()" href="#/app/addGravatar" translate>
+          Make this App Mine
+        </ion-item>
+        <ion-item nav-clear menu-close class="item-icon-left" href="#/app/start">
+        <i class="icon ion-android-more-horizontal"></i> <translate>Start</translate>
+        </ion-item>
+        <ion-item nav-clear menu-close class="item-icon-left" href="#/app/sessions" >
+         <i class="icon ion-clock"></i> <translate>Schedule/Program</translate>
+        </ion-item>
+        <ion-item nav-clear menu-close class="item-icon-left" href="#/app/peoplemet" >
+          <i class="icon ion-person-stalker"></i> <translate>Manage People Met</translate>
+        </ion-item>
+        <ion-item nav-clear menu-close class="item-icon-left" href="#/app/guides" >
+          <i class="icon ion-map"></i> <translate>Guides</translate>
+        </ion-item>
+        <ion-item nav-clear menu-close class="item-icon-left" href="#/app/blog" >
+          <i class="icon ion-ios-paper-outline"></i> <translate>Blog</translate>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

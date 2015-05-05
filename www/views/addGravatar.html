@@ -1,0 +1,26 @@
+<ion-view title="{{'Make this app mine' | translate}}">
+  <ion-content padding="true" class="has-header">
+  <div  ng-if="checaOwner()">
+    <div class="card tac">
+      <p class="item item-calm"><translate>This app is registered to</translate>: {{appOwner.displayName}}. <br>
+        <translate>Only proceed if this is wrong.</translate></p>
+    </div>
+    <button class="button button-block button-assertive" ng-click="deleteOwner()" translate>
+        Change the owner
+    </button>
+  </div>
+  <div ng-show="!checaOwner()">
+    <div>
+      <p ng-if="!appOwner.displayName" translate>You can make this app yours by entering your gravatar e-mail.</p>
+    </div>
+    <ion-list >
+      <label class="item item-input" name="gravatar-email">
+        <span class="input-label" translate>E-mail</span>
+        <input type="email" ng-model="gravatar.email">
+      </label>
+    </ion-list>
+    <button class="button button-balanced button-block" ng-click="addGravatar(gravatar.email)" translate>That is Me</button>
+  </div>
+  <a href="#/app/start" class="button button-assertive button-block" translate>Cancel</a>
+  </ion-content>
+</ion-view>

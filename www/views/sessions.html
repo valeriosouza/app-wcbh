@@ -1,0 +1,34 @@
+<ion-view title="{{Sessions | translate}}">
+  <ion-content padding="true" class="has-header">
+    <ion-slide-box ng-if="sessions" on-slide-changed="getByTrack($index)" class="list trackSelector" >
+      <ion-slide class="item">
+        <translate>ALL Tracks</translate>
+        <span class="item-note" translate>Tracks</span>
+      </ion-slide>
+      <ion-slide class="item" ng-repeat="(key, value) in sessions | groupBy: 'terms.wcb_track[0].ID'">
+        {{value[0].terms.wcb_track[0].name}}
+        <span class="item-note" translate>Tracks</span>
+      </ion-slide>
+    </ion-slide-box>
+    <p>{{error}}</p>
+    <div class="sessions-list">
+      <div class="session" ng-repeat="session in sessions | orderObjectBy: 'sessionTimestamp' ">
+        <a ui-sref="app.singlesession({sessionID: session.ID})" class="item item-divider session-title item-icon-right">
+         <span class="session-note">
+          {{session.sessionTimestamp *1000  | date:'HH:mma' : 'UTC' }}
+         </span>
+         <br>
+         <span ng-bind-html="session.title"></span>
+         <br>
+         <span class="session-note">
+          {{session.terms.wcb_track[0].name}}
+        </span>
+        
+        <i class="icon ion-arrow-right-c"></i>
+        </a>
+        
+      </div>
+    </div>
+    
+  </ion-content>
+</ion-view>
