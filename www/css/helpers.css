@@ -8,3 +8,9 @@
   height: 1.1em;
   width: auto;
 }
+.transparentBg,
+.transparent,
+.transparent .item {
+  background: transparent;
+  color: #fff;
+}

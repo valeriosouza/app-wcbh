@@ -23,8 +23,16 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
       '1782',
       '17'
     ]
-
-  }
+  };
+  CFG.sponsorsLogos = [
+      'lib/imgs/jetpack.jpg'
+    , 'lib/imgs/wpml.jpg'
+    , 'lib/imgs/woothemes.jpg'
+    , 'lib/imgs/unibh.jpg'
+    , 'lib/imgs/multiad.jpg'
+    , 'lib/imgs/bluehost.jpg'
+    , 'lib/imgs/10up.jpg'
+  ]
   return CFG;
 })
 .factory('GravatarService', function($http, CFG, $resource){
@@ -251,7 +259,7 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
 })
 .controller('StartCtrl', function(CFG, API, $scope, $state, GravatarService, $http){
   $scope.getSponsors = function(){
-    $scope.sponsors = API.query({type: 'wcb_sponsor'});
+    $scope.sponsors = CFG.sponsorsLogos
   }
   $scope.getSponsors();
 })
