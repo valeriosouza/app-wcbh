@@ -1,5 +1,5 @@
 <ion-view title="{{Sessions | translate}}">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header content">
     <ion-slide-box ng-if="sessions" on-slide-changed="getByTrack($index)" class="list trackSelector" >
       <ion-slide class="item">
         <translate>ALL Tracks</translate>
@@ -12,20 +12,24 @@
     </ion-slide-box>
     <p>{{error}}</p>
     <div class="sessions-list">
-      <div class="session" ng-repeat="session in sessions | orderObjectBy: 'sessionTimestamp' ">
-        <a ui-sref="app.singlesession({sessionID: session.ID})" class="item item-divider session-title item-icon-right">
+      <div class="session wpsessions" ng-repeat="session in sessions | orderObjectBy: 'sessionTimestamp' ">
+        <a ui-sref="app.singlesession({sessionID: session.ID})" class="item item-divider session-title" ng-if="session.speaker.title">
+        <div class="session-info">
          <span class="session-note">
+          <i class="icon ion-clock"></i>
           {{session.sessionTimestamp *1000  | date:'HH:mma' : 'UTC' }}
          </span>
-         <br>
-         <span ng-bind-html="session.title"></span>
-         <br>
          <span class="session-note">
           {{session.terms.wcb_track[0].name}}
-        </span>
-        
-        <i class="icon ion-arrow-right-c"></i>
+        </span> 
+        </div>
+         <span ng-bind-html="session.title" class="session-title"></span>
+         <span class="session-speaker session-note">{{session.speaker.title}}</span>
         </a>
+        <div class="session-break item item-title tac" ng-if="!session.speaker.title">
+          <span class="hour">{{session.sessionTimestamp *1000  | date:'HH:mma' : 'UTC' }}</span>
+          <span class="title">{{session.title}}</span>
+        </div>
         
       </div>
     </div>

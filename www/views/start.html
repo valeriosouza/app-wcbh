@@ -2,28 +2,35 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-content padding="true" class="has-header">
-  <div class="main-header" style="background-image:url('{{imgs.headerBackground}}');">
+  <ion-content padding="true" class="has-header content" style="background-image:url('{{imgs.headerBackground}}');">
+  <div class="main-header" >
     <img ng-src="{{imgs.logo}}" class="main-logo" ig="imgs.logo">
   </div>
     <div>
-      <p ng-if="checaOwner()" class="tac"><translate>You are most wellcome</translate>,  {{appOwner.displayName}}.</p>
-      <p translate>This App is intended to be used as a Guide, Souvenir and way to make contacts and new friends.</p>
-      <h2 class="title tac" translate>What do you want to do next?</h2>
+      <div class="wellcome-msg">
+        <p ng-if="checaOwner()" class="tac"><translate>You are most wellcome</translate>,  {{appOwner.displayName}}.</p>
+        <p translate>This App is intended to be used as a Guide, Souvenir and way to make contacts and new friends.</p>
+      </div>
       <p class="tac">
-        <div class="button-bar">
-          <a ui-sref="app.sessions" class="button button-clear icon ion-clock">&nbsp;</a>       
-          <a ui-sref="app.guides" class="button button-clear icon ion-map">&nbsp;</a>
-          <a ui-sref="app.peoplemet" class="button button-clear icon ion-person-stalker">&nbsp;</a>
-          <a ui-sref="app.blog" class="button button-clear icon ion-ios-paper-outline">&nbsp;</a>
-        </div>
+          <a ui-sref="app.sessions" class="button button-block wpbtn">
+            <i class="icon ion-clock left"></i> Programação &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
+          </a>       
+          <a ui-sref="app.guides" class="button button-block wpbtn">
+            <i class="icon ion-map left"></i>  Guias &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
+          </a>
+          <a ui-sref="app.peoplemet" class="button button-block wpbtn">
+            <i class="icon ion-clock ion-person-stalker left"></i>  Pessoas que conhecí &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
+          </a>
+          <a ui-sref="app.blog" class="button button-block wpbtn">
+            <i class="icon ion-ios-paper left"></i> Blog &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
+          </a>
       </p>
-      <div class="list card tac">
-      <div class="item" translate>Sponsors:</div>
+      <div class="list card tal sponsors">
+      <div class="item title" translate>Sponsors:</div>
         <div class="item item-body">
           <p>{{error}}</p>
             <span ng-repeat="sponsor in sponsors">
-                {{sponsor.title}} |
+                <img ng-src="{{sponsor}}" alt="">
             </span>
         </div>
 

@@ -3,9 +3,12 @@
 @import 'helpers.styl'
 $sessionColor = rgba(236,76,76,0.8)
 $main-font = 'Open Sans', sans-serif
-
+$main-btn-bg = lighten(#bc360a,10%)
+$bg-color = #282828
+$main-color = #fff
 body, p
   font-family: $main-font
+  color $main-color
 h1, h2, h3, h4, h5, .button
   font-family: $main-font
   font-weight: bold
@@ -21,7 +24,8 @@ h1, h2, h3, h4, h5, .button
 		.icon
 			font-size 1em
 			opacity: 0.9
-			
+.transparent
+	background: transparent			
 .main-header
 	padding 1.5em 0
 	background-size cover
@@ -62,3 +66,136 @@ h1, h2, h3, h4, h5, .button
 .blog-list
 	.item
 		white-space normal
+.wpbtn
+	letter-spacing: 0
+	background $main-btn-bg
+	color $main-color
+	padding 0.6em 0.8em
+	text-align right
+	overflow hidden
+	font-weight 400
+	border none
+	box-shadow inset 2px 0px 3px lighten($main-btn-bg, 60%), 3px 3px 4px rgba(0,0,0,0.5)
+	&:hover
+		color $main-color
+	i.icon.left:before
+		font-size 600%
+		float left
+		text-align left
+		margin-left -30px
+		margin-top 15px
+		margin-bottom -40px
+.sponsors
+	background transparent !important
+	.title.item
+		background transparent !important
+		color #fff
+		font-weight 500
+		line-height 2
+		padding 0
+		border-bottom 3px solid $main-btn-bg
+		&:before
+			content ""
+			width 50%
+			display block
+			position absolute
+			left 0px
+			bottom 0px
+			background $main-btn-bg
+			height 3px
+	.item-body
+		text-align center
+		img
+			max-width 45%
+			display inline-block
+			margin-right: 0.5em
+			margin-top: 2.5%
+.wellcome-msg
+	line-height 1.2
+	letter-spacing 0.0245em
+	text-align justify
+.has-header.content
+	background: $bg-color
+	background-repeat: no-repeat
+.wpsessions
+	.item
+		text-align right
+		border none
+		border-radius 4px
+		background: #fff
+		color $main-btn-bg
+		font-weight bolder
+		padding 0
+		box-shadow 3px 3px 4px rgba(0,0,0,0.5)
+		.session-info
+			background $main-btn-bg
+			width 30%
+			height 100%
+			float: left
+			font-weight 300
+			text-align center
+			height 5em
+			padding 1em 0.4em
+			position relative
+			&:after
+				content ""
+				width 0
+				height 0
+				border-top 8px solid transparent
+				border-bottom 8px solid transparent
+				border-left 8px solid $main-btn-bg
+				position absolute
+				right -8px
+				top 40%
+			span
+				color #fff
+				text-align center
+				font-size 0.6em
+				width 100%
+				clear both
+				display block
+			i:before
+				color #fff
+				width 100%
+				clear both
+				font-size 400%
+				line-height 1
+				margin-top -5px
+		.session-title
+			padding-right 1em
+			padding-top 0.5em
+			padding-left 0.8em
+			display inline-block
+			width 70%
+			font-weight 600
+			text-align left
+			font-size 0.9em
+		.session-speaker
+			font-weight 400
+			position absolute
+			bottom 0.2em
+			left 30%
+			padding-left 1em
+	.session-break
+		background $main-btn-bg
+		color #fff
+		font-size 0.9em
+		font-weight 400
+		width 100%
+		margin 0.5em auto
+		padding 0.1em 0
+		box-shadow 3px 3px 4px rgba(0,0,0,0.5)
+		.hour
+			display block
+			text-align: left
+			max-width 50%
+			float left
+			padding-left 1em
+			line-height 2
+		.title
+			display block
+			text-align: right
+			padding-right 1em
+			max-width 50%
+			float right
+			line-height 2
