@@ -2,24 +2,24 @@
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
-  <ion-content padding="true" class="has-header content" style="background-image:url('{{imgs.headerBackground}}');">
+  <ion-content padding="true" class="content noHeader" style="background-image:url('{{imgs.headerBackground}}');">
   <div class="main-header" >
     <img ng-src="{{imgs.logo}}" class="main-logo" ig="imgs.logo">
   </div>
     <div>
       <div class="wellcome-msg">
-        <p ng-if="checaOwner()" class="tac"><translate>You are most wellcome</translate>,  {{appOwner.displayName}}.</p>
+        <p ng-if="checaOwner()"><translate>You are most wellcome</translate>,  <strong>{{appOwner.displayName}}</strong>.</p>
         <p translate>This App is intended to be used as a Guide, Souvenir and way to make contacts and new friends.</p>
       </div>
       <p class="tac">
           <a ui-sref="app.sessions" class="button button-block wpbtn">
             <i class="icon ion-clock left"></i> Programação &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
           </a>       
-          <a ui-sref="app.guides" class="button button-block wpbtn">
-            <i class="icon ion-map left"></i>  Guias &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
-          </a>
           <a ui-sref="app.peoplemet" class="button button-block wpbtn">
             <i class="icon ion-clock ion-person-stalker left"></i>  Pessoas que conhecí &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
+          </a>
+          <a ui-sref="app.guides" class="button button-block wpbtn">
+            <i class="icon ion-map left"></i>  Guias &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>
           </a>
           <a ui-sref="app.blog" class="button button-block wpbtn">
             <i class="icon ion-ios-paper left"></i> Blog &nbsp;&nbsp;<i class="icon ion-chevron-right"></i>

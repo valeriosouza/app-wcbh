@@ -1,18 +1,27 @@
-<ion-view title="{{'People you met' | translate}}">
-    <ion-content padding="true" class="has-header">
+<ion-view title="{{'Conexões' | translate}}" class="headerClass">
+    <ion-content padding="true" class="has-header content">
         <div>
             <p translate>Here you have the contacts of every person you met and Scaned QR-Code.</p>
         </div>
-        <button class="button button-block icon ion-qr-scanner button-balanced "  ng-click="scanIt()" translate>Add by QR Code</button>    
-        <a class="button button-block icon ion-email button-clear"  ui-sref="app.addPerson" translate> Add by E-mail</a>    
-        <ion-list>
-            <ion-item class="item-thumbnail-left  item-icon-right" ng-repeat="person in people track by $index">
+        <div class="row">
+        <div class="w50">
+        <button class="button  button-assertive"  ng-click="scanIt()" translate> <span class="x4 icon ion-plus"></span> <br> <small>Nova Conexão</small></button>    
+        </div>
+        <div class="w50">
+            <a class="button button-calm"  ui-sref="app.addPerson" translate> 
+            <span class="icon ion-email"></span><br>
+            <small>Add por E-mail</small></a>
+        </div>
+        </div>
+        <div class="row">
+            <!-- <ion-item class="col-50 item-thumbnail-left  item-icon-right" ng-repeat="person in people track by $index">
                 <img src="{{person.image}}">
                 <h2>{{person.displayName}}</h2>
                 <p>{{person.email}}</p>
                 <p>{{person.location}}</p>
                 <i ng-click="deletePerson({{$index}})" class="icon ion-backspace-outline"></i>
-            </ion-item>
-        </ion-list>
+            </ion-item> -->
+                <img src="{{person.image}}" class="col-50" ng-repeat="person in people track by $index">
+        </div>
     </ion-content>
 </ion-view>
