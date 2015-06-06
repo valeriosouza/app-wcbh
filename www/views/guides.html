@@ -1,12 +1,10 @@
 <ion-view title="{{'Survivor Guides' | translate}}">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header guides content">
     <h2 class="title">{{guidesIndex.title}}</h2>
     <p ng-bind-html="guidesIndex.content"></p>
-    <h3 translate>Guides</h3>
-    <ion-list>
-      <ion-item class="tac" href="#/app/guides/{{guide.ID}}" ng-repeat="guide in guides">
+    <h3 translate class="white">Guides</h3>
+      <a class="tac button button-block button-clear" href="#/app/guides/{{guide.ID}}" ng-repeat="guide in guides">
           {{guide.title}}
-      </ion-item>
-    </ion-list>
+      </a>
   </ion-content>
 </ion-view>

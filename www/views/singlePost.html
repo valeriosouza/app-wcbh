@@ -6,12 +6,12 @@
   	</ion-nav-buttons>
     <ion-content padding="true" class="has-header">
         	<h3>{{post.title}}</h3>
-        	<p><small>{{post.date  | date:'dd-MM-yyyy' : 'UTC' }}</small></p>
-        <div class="card  padding">
+        	<p class="postInfo tar">Data: <small>{{post.date  | date:'dd/MM/yyyy' : 'UTC' }}</small></p>
+        <div class="card">
 					<div ng-bind-html="post.content" class="item item-body">
           </div>
-					<div class="item item-divider">
-						<small translate>Originally published in</small> <small>{{post.link}}</small>
+					<div class="item item-divider originalPost">
+						<small translate>Original: </small> <small>{{post.link}}</small>
 					</div>
         </div>
     </ion-content>

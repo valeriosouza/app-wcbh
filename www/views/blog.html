@@ -1,8 +1,8 @@
 <ion-view title="{{Blog | translate}}">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header content">
     <ion-list class="blog-list">
-      <ion-item class="item" ng-repeat="post in blog" ui-sref="app.singlepost({postID: post.ID})">
-        <span ng-bind-html="post.title"></span>
+      <ion-item class="item blog" ng-repeat="post in blog" ui-sref="app.singlepost({postID: post.ID})">
+        <h2 class="" ng-bind-html="post.title"></h2>
         <span class="item-note">
           {{post.date  | date:'d-MM-yyyy' : 'UTC' }}
         </span>

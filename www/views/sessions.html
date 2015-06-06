@@ -1,15 +1,5 @@
 <ion-view title="{{Sessions | translate}}">
   <ion-content padding="true" class="has-header content">
-    <ion-slide-box ng-if="sessions" on-slide-changed="getByTrack($index)" class="list trackSelector" >
-      <ion-slide class="item">
-        <translate>ALL Tracks</translate>
-        <span class="item-note" translate>Tracks</span>
-      </ion-slide>
-      <ion-slide class="item" ng-repeat="(key, value) in sessions | groupBy: 'terms.wcb_track[0].ID'">
-        {{value[0].terms.wcb_track[0].name}}
-        <span class="item-note" translate>Tracks</span>
-      </ion-slide>
-    </ion-slide-box>
     <p>{{error}}</p>
     <div class="sessions-list">
       <div class="session wpsessions" ng-repeat="session in sessions | orderObjectBy: 'sessionTimestamp' ">

@@ -139,6 +139,10 @@ h5,
   line-height: 1.2;
   white-space: normal;
 }
+.sessions-list .session-title.email,
+.sessions-list .session-info.email {
+  color: #555;
+}
 .sessions-list .session-note {
   font-size: 0.8em;
   line-height: 0.9;
@@ -313,6 +317,16 @@ h5,
   float: right;
   line-height: 2;
 }
+.wpsessions .session-info.peoplemet {
+  padding: 0;
+}
+.wpsessions .session-info.peoplemet img {
+  min-width: 100%;
+  min-height: 100%;
+}
+.wpsessions .session-info.peoplemet:after {
+  border-left: 8px solid #282828;
+}
 .mainHeader {
   background: transparent !important;
   border: none;
@@ -324,4 +338,27 @@ h5,
 .has-header {
   top: 0px;
   padding-top: 45px;
+}
+.content .title {
+  color: #fff;
+}
+.white {
+  color: #fff;
+}
+.blog-list .blog.item {
+  border: none;
+  color: #fff;
+}
+.blog-list .blog.item .item-content {
+  background-color: #282828;
+  border: none;
+}
+.blog-list .blog.item .item-content h2 {
+  color: #fff;
+}
+.postInfo {
+  color: #222;
+}
+.originalPost {
+  font-size: 0.8em;
 }

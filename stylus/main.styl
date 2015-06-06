@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5, .button
 		font-size 1.1em
 		line-height 1.2
 		white-space: normal
+		&.email
+			color #555
 	.session-note
 		font-size 0.80em
 		line-height 0.9
@@ -201,6 +203,13 @@ h1, h2, h3, h4, h5, .button
 			max-width 50%
 			float right
 			line-height 2
+	.session-info.peoplemet
+		padding 0	
+		img
+			min-width 100%
+			min-height 100%
+		&:after
+			border-left 8px solid $bg-color
 .mainHeader
 	background transparent !important
 	border none
@@ -209,3 +218,23 @@ h1, h2, h3, h4, h5, .button
 .has-header
 	top 0px
 	padding-top 45px
+.content
+	& .title
+		color #fff
+.white
+	color #fff
+.blog-list
+	.blog.item
+		border none
+		color #fff
+		.item-content
+			background-color $bg-color
+			border none
+			h2
+				color #fff
+			p
+				lighteen(#fff, 20%)
+.postInfo
+	color #222
+.originalPost
+	font-size 0.8em
