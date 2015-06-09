@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, .button
 	background-repeat no-repeat
 	margin -1em -1em 1em -1em
 	.main-logo
-		max-width 90%
+		max-width 50%
 		margin 0 auto
 		display block
 .sessions-list
@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5, .button
 		font-size 1.1em
 		line-height 1.2
 		white-space: normal
+		&.email
+			color #555
 	.session-note
 		font-size 0.80em
 		line-height 0.9
@@ -113,7 +115,9 @@ h1, h2, h3, h4, h5, .button
 .wellcome-msg
 	line-height 1.2
 	letter-spacing 0.0245em
-	text-align justify
+	p
+		font-size 0.85em
+		text-shadow 1px 1px 4px #222
 .has-header.content
 	background: $bg-color
 	background-repeat: no-repeat
@@ -199,3 +203,38 @@ h1, h2, h3, h4, h5, .button
 			max-width 50%
 			float right
 			line-height 2
+	.session-info.peoplemet
+		padding 0	
+		img
+			min-width 100%
+			min-height 100%
+		&:after
+			border-left 8px solid $bg-color
+.mainHeader
+	background transparent !important
+	border none
+	a, button
+		color #fff important
+.has-header
+	top 0px
+	padding-top 45px
+.content
+	& .title
+		color #fff
+.white
+	color #fff
+.blog-list
+	.blog.item
+		border none
+		color #fff
+		.item-content
+			background-color $bg-color
+			border none
+			h2
+				color #fff
+			p
+				lighteen(#fff, 20%)
+.postInfo
+	color #222
+.originalPost
+	font-size 0.8em

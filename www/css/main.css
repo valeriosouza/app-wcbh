@@ -122,7 +122,7 @@ h5,
   margin: -1em -1em 1em -1em;
 }
 .main-header .main-logo {
-  max-width: 90%;
+  max-width: 50%;
   margin: 0 auto;
   display: block;
 }
@@ -138,6 +138,10 @@ h5,
   font-size: 1.1em;
   line-height: 1.2;
   white-space: normal;
+}
+.sessions-list .session-title.email,
+.sessions-list .session-info.email {
+  color: #555;
 }
 .sessions-list .session-note {
   font-size: 0.8em;
@@ -213,7 +217,10 @@ h5,
 .wellcome-msg {
   line-height: 1.2;
   letter-spacing: 0.0245em;
-  text-align: justify;
+}
+.wellcome-msg p {
+  font-size: 0.85em;
+  text-shadow: 1px 1px 4px #222;
 }
 .has-header.content {
   background: #282828;
@@ -309,4 +316,49 @@ h5,
   max-width: 50%;
   float: right;
   line-height: 2;
+}
+.wpsessions .session-info.peoplemet {
+  padding: 0;
+}
+.wpsessions .session-info.peoplemet img {
+  min-width: 100%;
+  min-height: 100%;
+}
+.wpsessions .session-info.peoplemet:after {
+  border-left: 8px solid #282828;
+}
+.mainHeader {
+  background: transparent !important;
+  border: none;
+}
+.mainHeader a,
+.mainHeader button {
+  color: #fff important;
+}
+.has-header {
+  top: 0px;
+  padding-top: 45px;
+}
+.content .title {
+  color: #fff;
+}
+.white {
+  color: #fff;
+}
+.blog-list .blog.item {
+  border: none;
+  color: #fff;
+}
+.blog-list .blog.item .item-content {
+  background-color: #282828;
+  border: none;
+}
+.blog-list .blog.item .item-content h2 {
+  color: #fff;
+}
+.postInfo {
+  color: #222;
+}
+.originalPost {
+  font-size: 0.8em;
 }

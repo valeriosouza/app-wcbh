@@ -1,18 +1,34 @@
-<ion-view title="{{'People you met' | translate}}">
-    <ion-content padding="true" class="has-header">
+<ion-view title="{{'Conexões' | translate}}" class="headerClass">
+    <ion-content padding="true" class="has-header content">
         <div>
             <p translate>Here you have the contacts of every person you met and Scaned QR-Code.</p>
         </div>
-        <button class="button button-block icon ion-qr-scanner button-balanced "  ng-click="scanIt()" translate>Add by QR Code</button>    
-        <a class="button button-block icon ion-email button-clear"  ui-sref="app.addPerson" translate> Add by E-mail</a>    
-        <ion-list>
-            <ion-item class="item-thumbnail-left  item-icon-right" ng-repeat="person in people track by $index">
-                <img src="{{person.image}}">
-                <h2>{{person.displayName}}</h2>
-                <p>{{person.email}}</p>
-                <p>{{person.location}}</p>
-                <i ng-click="deletePerson({{$index}})" class="icon ion-backspace-outline"></i>
-            </ion-item>
-        </ion-list>
+        <div class="row">
+        <div class="col-50">
+             <button class="button button-block  button-assertive"  ng-click="scanIt()" translate> <span class="x4 icon ion-plus"></span> <br> <small>Nova Conexão</small></button>    
+        </div>
+        <div class="col-50">
+            <a class="button button-block button-calm"  ui-sref="app.addPerson" translate> 
+            <span class="icon ion-email"></span><br>
+            <small>Add por E-mail</small></a>
+        </div>
+        </div>
+        <div class="row">
+            
+        </div>
+        <div class="sessions-list">
+      <div class="session wpsessions" ng-repeat="person in people">
+        <a  class="item item-divider session-title" >
+        <div class="session-info peoplemet" ng-ĩf="person.image">
+        <img src="{{person.image}}" alt="" class="avatarGravatar">
+        </div>
+         <span ng-bind-html="person.displayName" class="session-title"></span>
+         <span class="session-title  email">{{person.email}}&nbsp;&nbsp;</span>
+         <span class="session-speaker session-note">{{person.location}}</span>
+        </a>
+        
+      </div>
+    </div>
+    
     </ion-content>
 </ion-view>

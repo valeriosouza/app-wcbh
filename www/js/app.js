@@ -73,7 +73,7 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
       },
       responseError: function(err){
         $rootScope.$broadcast('loading:hide');
-        alert('Error: ' + err.status)
+        alert('Erro ao carregar: Erro ' + err.status)
         return err
       }
     }
@@ -336,7 +336,7 @@ $scope.addPerson = function(gravatarUrl) {
       };
       $scope.people.unshift(newPerson);
     }, function(err){
-      alert(err.status);
+      alert('Houve um erro ao adicionar: ', err);
     })
 }
 $scope.scanIt = function(){
@@ -345,7 +345,7 @@ $scope.scanIt = function(){
           $scope.addPerson(result.text);
       }, 
       function (error) {
-          alert("Scanning failed: " + error);
+          alert("Houve um erro ao scanear o QRCode. \n Experimente adicionar por e-mail \n" + error);
       }
    );
 }
