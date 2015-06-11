@@ -131,7 +131,8 @@ h5,
 }
 .sessions-list .session {
   width: 100%;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
+  max-width: 400px;
 }
 .sessions-list .session-title,
 .sessions-list .session-info {

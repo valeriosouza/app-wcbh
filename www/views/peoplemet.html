@@ -20,7 +20,7 @@
       <div class="session wpsessions" ng-repeat="person in people">
         <a  class="item item-divider session-title" >
         <div class="session-info peoplemet" ng-ĩf="person.image">
-        <img src="{{person.image}}" alt="" class="avatarGravatar">
+        <img ng-src="{{person.image}}" alt="" class="avatarGravatar">
         </div>
          <span ng-bind-html="person.displayName" class="session-title"></span>
          <span class="session-title  email">{{person.email}}&nbsp;&nbsp;</span>

@@ -73,7 +73,24 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
       },
       responseError: function(err){
         $rootScope.$broadcast('loading:hide');
-        alert('Erro ao carregar: Erro ' + err.status)
+        switch(err.status){
+          case 0:
+              err.message = 'Não foi possível conectar. \n (Você tem certeza que está online?)';
+            break;
+          case 404 :
+            err.message = 'Não encontrado. (Erro 404). Desculpa.'
+            break;
+        }
+       //  return $rootScope.showAlert = function() {
+       //   var alertPopup = $ionicPopup.alert({
+       //     title: 'Error!',
+       //     template: err.message
+       //   });
+       //   alertPopup.then(function(res) {
+       //     console.log('Thank you for not eating my delicious ice cream cone');
+       //   });
+       // };
+        alert(err.message)
         return err
       }
     }
