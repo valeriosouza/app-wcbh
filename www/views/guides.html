@@ -1,4 +1,10 @@
 <ion-view title="{{'Survivor Guides' | translate}}">
+<ion-header-bar align-title="left" class="transparentBg mainHeader">
+  <div class="buttons">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+  </div>
+  
+</ion-header-bar>
   <ion-content padding="true" class="has-header guides content">
     <h2 class="title">{{guidesIndex.title}}</h2>
     <p ng-bind-html="guidesIndex.content"></p>
