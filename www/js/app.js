@@ -31,7 +31,14 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
     , 'lib/imgs/unibh.jpg'
     , 'lib/imgs/multiad.jpg'
     , 'lib/imgs/bluehost.jpg'
+    , 'lib/imgs/kinghost.jpg'
+    , 'lib/imgs/uolhost.jpg'
+    , 'lib/imgs/uber.jpg'
     , 'lib/imgs/10up.jpg'
+    , 'lib/imgs/amem.jpg'
+    , 'lib/imgs/cssigniter.jpg'
+    , 'lib/imgs/guajaeminas.jpg'
+    , 'lib/imgs/wordlab.jpg'
   ]
   return CFG;
 })
@@ -73,7 +80,24 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
       },
       responseError: function(err){
         $rootScope.$broadcast('loading:hide');
-        alert('Erro ao carregar: Erro ' + err.status)
+        switch(err.status){
+          case 0:
+              err.message = 'Não foi possível conectar. \n (Você tem certeza que está online?)';
+            break;
+          case 404 :
+            err.message = 'Não encontrado. (Erro 404). Desculpa.'
+            break;
+        }
+       //  return $rootScope.showAlert = function() {
+       //   var alertPopup = $ionicPopup.alert({
+       //     title: 'Error!',
+       //     template: err.message
+       //   });
+       //   alertPopup.then(function(res) {
+       //     console.log('Thank you for not eating my delicious ice cream cone');
+       //   });
+       // };
+        alert(err.message)
         return err
       }
     }
@@ -299,7 +323,7 @@ angular.module('app', ['ionic', 'gettext', 'angular.filter', 'ngResource', 'ngSt
     if(flag == 'yes'){
       console.log('The terms have already been accepted');
     } else {
-      $state.go('firstTime');
+      //$state.go('firstTime');
     }
   }
   $scope.checkTerms();

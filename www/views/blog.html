@@ -1,4 +1,10 @@
 <ion-view title="{{Blog | translate}}">
+<ion-header-bar align-title="left" class="transparentBg mainHeader">
+  <div class="buttons">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+  </div>
+  
+</ion-header-bar>
   <ion-content padding="true" class="has-header content">
     <ion-list class="blog-list">
       <ion-item class="item blog" ng-repeat="post in blog" ui-sref="app.singlepost({postID: post.ID})">

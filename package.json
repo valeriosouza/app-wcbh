@@ -22,7 +22,9 @@
     "org.apache.cordova.console",
     "com.ionic.keyboard",
     "org.apache.cordova.splashscreen",
-    "cordova-plugin-splashscreen"
+    "cordova-plugin-splashscreen",
+    "phonegap-plugin-barcodescanner",
+    "cordova-plugin-whitelist"
   ],
   "cordovaPlatforms": [
     "android"

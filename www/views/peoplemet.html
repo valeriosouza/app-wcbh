@@ -1,15 +1,20 @@
 <ion-view title="{{'Conexões' | translate}}" class="headerClass">
+<ion-header-bar align-title="left" class="transparentBg mainHeader">
+  <div class="buttons">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+  </div>
+</ion-header-bar>
     <ion-content padding="true" class="has-header content">
         <div>
             <p translate>Here you have the contacts of every person you met and Scaned QR-Code.</p>
         </div>
         <div class="row">
         <div class="col-50">
-             <button class="button button-block  button-assertive"  ng-click="scanIt()" translate> <span class="x4 icon ion-plus"></span> <br> <small>Nova Conexão</small></button>    
+             <button class="button button-block  button-assertive"  ng-click="scanIt()" translate> <span class="x4 icon ion-plus"></span> <small>Nova Conexão</small></button>    
         </div>
         <div class="col-50">
             <a class="button button-block button-calm"  ui-sref="app.addPerson" translate> 
-            <span class="icon ion-email"></span><br>
+            <span class="icon ion-email"></span>
             <small>Add por E-mail</small></a>
         </div>
         </div>
@@ -20,7 +25,7 @@
       <div class="session wpsessions" ng-repeat="person in people">
         <a  class="item item-divider session-title" >
         <div class="session-info peoplemet" ng-ĩf="person.image">
-        <img src="{{person.image}}" alt="" class="avatarGravatar">
+        <img ng-src="{{person.image}}" alt="" class="avatarGravatar">
         </div>
          <span ng-bind-html="person.displayName" class="session-title"></span>
          <span class="session-title  email">{{person.email}}&nbsp;&nbsp;</span>
